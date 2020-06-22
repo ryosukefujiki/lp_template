@@ -32,9 +32,55 @@
 import Vue from 'vue'
 import Logo from '~/components/Logo.vue'
 
+import { mapGetters } from "vuex";
+import { TweenMax, Elastic, Expo, Back, Linear } from "gsap";
+
 export default Vue.extend({
   components: {
     Logo
+  },
+  data() {
+    return {
+    }
+  },
+  methods: {
+    testMethod: function() {
+    },
+  },
+  computed: {
+    ...mapGetters({
+      leftMove: "leftClicked"
+    })
+  },
+  watch: {
+   async leftMove(val) {
+    //  requestAnimationFrame(() => {
+    //     TweenMax.to("", 0.1, {
+    //       opacity: 1,
+    //       ease: Expo.easeIn,
+    //       onComplete: function() {
+    //       }
+    //     });
+    //     TweenMax.staggerTo(
+    //       ".TheDetail_Greeting_Header",
+    //       0.2,
+    //       {
+    //         delay: 0.1,
+    //         ease: Expo.easeIn,
+    //         opacity: 1
+    //       },
+    //       0.2
+    //     );
+    //   });
+    //  await this.$delay(500);
+    //  this.$router.push("/detail");
+   }
+  },
+  mounted() {
+    // window.addEventListener("scroll", this.scrollStart, false);
+  },
+  destroyed() {
+    // window.removeEventListener("scroll", this.scrollStart, false);
   }
 })
 </script>
@@ -69,5 +115,14 @@ export default Vue.extend({
 
 .links {
   padding-top: 15px;
+}
+
+@media screen and (max-width: 1024px) {
+}
+@media screen and (max-width: 768px) {
+}
+@media screen and (max-width: 480px) {
+}
+@media screen and (max-width: 320px) {
 }
 </style>

@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="default">
     <nuxt />
   </div>
 </template>
@@ -15,6 +15,18 @@ html {
   -moz-osx-font-smoothing: grayscale;
   -webkit-font-smoothing: antialiased;
   box-sizing: border-box;
+}
+
+
+html,body,#__nuxt,#__layout{
+  width: 100%;
+  height: 100%;
+  /* background: red; */
+}
+
+.default {
+  width: 100%;
+  height: 100%;
 }
 
 *,
